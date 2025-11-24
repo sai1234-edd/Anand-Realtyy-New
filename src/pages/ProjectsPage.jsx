@@ -426,7 +426,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Toast Notification */}
       <AnimatePresence>
         {showToast && (
@@ -456,7 +456,7 @@ const Projects = () => {
       </AnimatePresence>
 
       {/* Hero Section */}
-      <section className="relative py-16 bg-gradient-to-br from-blue-100 to-cyan-100">
+      <section className="relative py-16 bg-gradient-to-br from-blue-500 to-cyan-">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
           <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>

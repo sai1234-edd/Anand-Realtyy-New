@@ -19,11 +19,6 @@ const About = () => {
 
   const values = [
     {
-      icon: "🤝",
-      title: "Trust & Transparency",
-      description: "Complete legal documentation and honest communication in every transaction"
-    },
-    {
       icon: "⭐",
       title: "Quality Excellence",
       description: "Uncompromised construction standards using premium materials and techniques"
@@ -340,11 +335,14 @@ const About = () => {
                       </h3>
                       <div className="space-y-4 text-left">
                         <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-                          What began with single plot developments has now evolved into large-scale 
-                          residential ventures and townships. Yet, our core principles remain unchanged: 
-                          delivering genuine properties with transparent documentation, creating 
-                          infrastructure with uncompromised quality, and offering plotted solutions 
-                          that remain accessible to all investors.
+                          Anand Realtyy is built on trust, transparency, and long-term value. We ensure every property
+                          rests on strong legal foundations through meticulous document scrutiny and ethical practices.
+                        </p>
+                        <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+                          By blending modern design with traditional Vastu principles, we create balanced, future-ready
+                          spaces that offer accessible luxury without compromise. Our focus is to deliver refined,
+                          high-quality developments that enrich lifestyles, safeguard investments, and stand as lasting
+                          legacies for generations.
                         </p>
                       </div>
                     </div>
@@ -356,7 +354,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section - Mobile Optimized */}
+      {/* Values Section - Mobile Optimized - FIXED ALIGNMENT */}
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div
@@ -374,28 +372,30 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto px-2 sm:px-0">
+          {/* Fixed Grid Layout - Changed from 4 columns to 3 columns for better alignment */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto px-2 sm:px-0">
             {values.map((value, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.08 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="bg-white rounded-xl shadow-lg p-4 md:p-6 text-center group hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
+                whileHover={{ y: -8, scale: 1.03 }}
+                className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center group hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200 flex flex-col h-full"
               >
-                <div className="text-3xl sm:text-4xl md:text-5xl mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
                   {value.icon}
                 </div>
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-blue-800 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors">{value.title}</h3>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed group-hover:text-gray-700 transition-colors">{value.description}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4 group-hover:text-blue-600 transition-colors">{value.title}</h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed group-hover:text-gray-700 transition-colors flex-grow">
+                  {value.description}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-      
 
       {/* Timeline Section - Mobile Optimized */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-blue-50 to-gray-50">

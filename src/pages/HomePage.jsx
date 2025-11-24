@@ -97,12 +97,6 @@ const Home = () => {
       features: ["Site Analysis", "Design Optimization", "Energy Flow", "Remedial Solutions"]
     },
     {
-      title: "Legal Services",
-      description: "Complete legal support from documentation to registration",
-      icon: "⚖️",
-      features: ["Document Verification", "Legal Clearance", "Registration", "Post-sale Support"]
-    },
-    {
       title: "Plot Development",
       description: "Strategic plot division and development with modern infrastructure",
       icon: "📐",
@@ -416,7 +410,7 @@ const Home = () => {
               >
                 <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4">Our Founding Principle</h3>
                 <p className="text-gray-700 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
-                  "Dharmo Rakshati Rakshitah" - this ancient wisdom forms the bedrock of our operations. 
+                   This ancient wisdom forms the bedrock of our operations. 
                   We've demonstrated that when you uphold righteousness and ethical practices, success follows naturally.
                 </p>
                 <p className="text-gray-700 leading-relaxed text-sm md:text-base">
@@ -581,7 +575,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - FIXED ALIGNMENT */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -599,7 +593,8 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto px-2">
+          {/* Fixed Grid Layout - Changed from 3 columns to 2 columns for better alignment */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto px-2">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -607,16 +602,22 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
               >
-                <div className="p-4 md:p-6">
-                  <div className="text-4xl md:text-5xl mb-3 md:mb-4 text-center text-blue-600">{service.icon}</div>
-                  <h3 className="text-lg md:text-xl font-bold text-blue-800 mb-2 md:mb-3 text-center leading-tight">{service.title}</h3>
-                  <p className="text-gray-600 text-center mb-3 md:mb-4 text-sm md:text-base">{service.description}</p>
-                  <ul className="space-y-1 md:space-y-2">
+                <div className="p-6 md:p-8">
+                  <div className="text-5xl md:text-6xl mb-4 md:mb-6 text-center text-blue-600 group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4 text-center leading-tight group-hover:text-blue-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-center mb-4 md:mb-6 text-base md:text-lg leading-relaxed">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 md:space-y-3">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700 text-xs md:text-sm">
-                        <span className="text-orange-500 mr-1 md:mr-2">✓</span>
+                      <li key={featureIndex} className="flex items-center text-gray-700 text-sm md:text-base group-hover:text-gray-800 transition-colors">
+                        <span className="text-orange-500 mr-2 md:mr-3 text-lg">✓</span>
                         {feature}
                       </li>
                     ))}
