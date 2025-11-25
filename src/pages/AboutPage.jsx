@@ -11,7 +11,7 @@ const About = () => {
   const isInView3 = useInView(ref3, { once: true, threshold: 0.3 });
 
   const milestones = [
-    { year: "1998", title: "Foundation", description: "Anand Realtyy established with vision of ethical real estate" },
+    { year: "1988", title: "Foundation", description: "Anand Realtyy established with vision of ethical real estate" },
     { year: "2005", title: "Expansion", description: "Diversified into infrastructure and cinema production" },
     { year: "2014", title: "Consolidation", description: "Unified all verticals under Anand Realtyy brand" },
     { year: "2025", title: "Innovation", description: "Launched future-ready real estate solutions" }
