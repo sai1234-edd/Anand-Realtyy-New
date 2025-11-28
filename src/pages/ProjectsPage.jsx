@@ -456,7 +456,7 @@ const Projects = () => {
       </AnimatePresence>
 
       {/* Hero Section */}
-      <section className="relative py-16 bg-gradient-to-br from-blue-500 to-cyan-">
+      <section className="relative py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
           <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
@@ -469,11 +469,11 @@ const Projects = () => {
             transition={{ duration: 1 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-blue-800">
-              Premium <span className="text-cyan-600">Land Properties</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-White-800">
+               <span className="text-yellow-600">Premium Land Properties</span>
             </h1>
             <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
-            <p className="text-xl md:text-2xl text-blue-700 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
               Discover exclusive plots with strategic locations, complete legal assurance, and excellent investment potential
             </p>
           </motion.div>
