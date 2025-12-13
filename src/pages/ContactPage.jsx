@@ -696,9 +696,9 @@ import axios from "axios";
 
 // Backend API configuration
 const API_CONFIG = {
-  BASE_URL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
+  BASE_URL: process.env.REACT_APP_API_URL || "http://localhost:8000/api",
   ENDPOINTS: {
-    CONTACT: "/contact",
+    CONTACT: "/Realtyy",
   },
   TIMEOUT: 10000,
 };
