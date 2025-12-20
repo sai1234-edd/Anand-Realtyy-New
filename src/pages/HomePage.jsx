@@ -68,22 +68,22 @@ const Home = () => {
 
   const features = [
     {
-      icon: "📜",
+      icon: <i className='fas fa-gavel text-blue-500 text-2xl'></i>,
       title: "Legal Assurance",
       description: "Every property undergoes rigorous legal verification with complete document transparency"
     },
     {
-      icon: "⚖️",
+      icon: <i className='fas fa-compass text-green-500 text-2xl'></i>,
       title: "Vastu Compliance",
       description: "Scientific Vastu principles integrated with modern architectural excellence"
     },
     {
-      icon: "⭐",
+      icon: <i className='fas fa-award text-yellow-500 text-2xl'></i>,
       title: "Quality Promise",
       description: "Premium construction materials and uncompromised building standards"
     },
     {
-      icon: "🛡️",
+      icon: <i className='fas fa-shield-alt text-blue-500 text-2xl'></i>,
       title: "Investment Security",
       description: "Properties designed to appreciate and safeguard your financial future"
     }
@@ -93,13 +93,13 @@ const Home = () => {
     {
       title: "Vastu Consultation",
       description: "Expert Vastu analysis and implementation for harmonious living spaces",
-      icon: "🧘",
+      icon: <i className='fas fa-home text-blue-500 text-4xl'></i>,
       features: ["Site Analysis", "Design Optimization", "Energy Flow", "Remedial Solutions"]
     },
     {
       title: "Plot Development",
       description: "Strategic plot division and development with modern infrastructure",
-      icon: "📐",
+      icon: <i className='fas fa-ruler-combined text-blue-500 text-4xl'></i>,
       features: ["Layout Planning", "Infrastructure", "Plot Division", "Development"]
     }
   ];
@@ -108,17 +108,17 @@ const Home = () => {
     {
       title: "Ethical Foundation",
       description: "Built on the principle of 'Dharmo Rakshati Rakshitah' - righteousness protects the protector",
-      icon: "🌱"
+      icon: <i className='fas fa-seedling text-orange-500 text-2xl'></i>
     },
     {
       title: "Client-Centric Approach",
       description: "Every decision is made with our clients' best interests at heart",
-      icon: "🤝"
+      icon: <i className='fas fa-handshake text-orange-500 text-2xl'></i>
     },
     {
       title: "Innovation & Tradition",
       description: "Blending modern technology with time-tested construction wisdom",
-      icon: "🔬"
+      icon: <i className='fas fa-lightbulb text-orange-500 text-2xl'></i>
     }
   ];
 
@@ -129,7 +129,7 @@ const Home = () => {
       location: "Anand Elite Residency",
       rating: 5,
       comment: "Anand Realtyy delivered exactly what they promised. The legal documentation was completely transparent and the Vastu-compliant design has brought positive energy to our home.",
-      avatar: "👨‍💼",
+      avatar: <i className='fas fa-user-tie text-blue-600 text-2xl'></i>,
       date: "January 2024"
     },
     {
@@ -138,7 +138,7 @@ const Home = () => {
       location: "Vastu Harmony Villas",
       rating: 5,
       comment: "From the first meeting to handover, the team was professional and responsive. Our villa was completed before time with exceptional quality.",
-      avatar: "👩‍💼",
+      avatar: <i className='fas fa-user-graduate text-blue-600 text-2xl'></i>,
       date: "December 2023"
     },
     {
@@ -147,7 +147,7 @@ const Home = () => {
       location: "Business Hub Tower",
       rating: 5,
       comment: "As a commercial investor, I appreciate Anand Realtyy's attention to detail and commitment to quality. The commercial space has excellent ROI potential.",
-      avatar: "👨‍💻",
+      avatar: <i className='fas fa-user-tie text-blue-600 text-2xl'></i>,
       date: "November 2023"
     },
     {
@@ -156,7 +156,7 @@ const Home = () => {
       location: "Green Valley Apartments",
       rating: 5,
       comment: "The eco-friendly features and green spaces in our apartment complex are wonderful. Anand Realtyy truly cares about sustainable living.",
-      avatar: "👩‍🏫",
+      avatar: <i className='fas fa-user-graduate text-blue-600 text-2xl'></i>,
       date: "October 2023"
     },
     {
@@ -165,7 +165,7 @@ const Home = () => {
       location: "Multiple Properties",
       rating: 5,
       comment: "I've invested in 3 properties with Anand Realtyy over the years. Their consistent quality, ethical practices keep me coming back.",
-      avatar: "👨‍🎓",
+      avatar: <i className='fas fa-user-tie text-blue-600 text-2xl'></i>,
       date: "September 2023"
     },
     {
@@ -174,7 +174,7 @@ const Home = () => {
       location: "Anand Elite Residency",
       rating: 5,
       comment: "The attention to detail in construction quality is remarkable. Every corner of our apartment reflects superior craftsmanship.",
-      avatar: "👩‍⚕️",
+      avatar: <i className='fas fa-user-nurse text-blue-600 text-2xl'></i>,
       date: "August 2023"
     }
   ];
@@ -244,7 +244,7 @@ const Home = () => {
               index < rating ? 'text-yellow-400' : 'text-gray-300'
             }`}
           >
-            ★
+            <i className="fas fa-star"></i>
           </span>
         ))}
       </div>
@@ -288,17 +288,13 @@ const Home = () => {
                     onClick={() => setCurrentHeroSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
                     className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-300 z-10"
                   >
-                    <svg className="w-4 h-4 md:w-5 md:h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
+                    <i className="fas fa-chevron-left text-gray-700 text-sm md:text-base"></i>
                   </button>
                   <button
                     onClick={() => setCurrentHeroSlide((prev) => (prev + 1) % heroSlides.length)}
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-300 z-10"
                   >
-                    <svg className="w-4 h-4 md:w-5 md:h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <i className="fas fa-chevron-right text-gray-700 text-sm md:text-base"></i>
                   </button>
 
                   {/* Navigation Dots */}
@@ -342,7 +338,7 @@ const Home = () => {
                       <div className="grid grid-cols-2 gap-2 mb-4 md:mb-6">
                         {heroSlides[currentHeroSlide].features.map((feature, index) => (
                           <div key={index} className="flex items-center text-xs md:text-sm text-gray-700">
-                            <span className="text-green-500 mr-1">✓</span>
+                            <span className="text-green-500 mr-1"><i className="fas fa-check-circle"></i></span>
                             {feature}
                           </div>
                         ))}
@@ -353,13 +349,13 @@ const Home = () => {
                           to="/projects" 
                           className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg text-sm md:text-base text-center"
                         >
-                          View Projects
+                          <i className="fas fa-building mr-2"></i>View Projects
                         </Link>
                         <Link 
                           to="/contact" 
                           className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold transition-all duration-300 text-sm md:text-base text-center"
                         >
-                          Free Consultation
+                          <i className="fas fa-calendar-alt mr-2"></i>Free Consultation
                         </Link>
                       </div>
                     </motion.div>
@@ -368,7 +364,7 @@ const Home = () => {
                   {/* Brand Tagline */}
                   <div className="mt-4 md:mt-6 pt-3 md:pt-4 border-t border-gray-200">
                     <p className="text-xs md:text-sm text-gray-500 text-center lg:text-left leading-tight">
-                      <span className="text-orange-500 font-semibold">"Dharmo Rakshati Rakshitah"</span> - Building Trust, Delivering Excellence
+                      <span className="text-orange-500 font-semibold"><i className="fas fa-quote-left mr-1"></i>"Dharmo Rakshati Rakshitah"<i className="fas fa-quote-right ml-1"></i></span> - Building Trust, Delivering Excellence
                     </p>
                   </div>
                 </div>
@@ -392,7 +388,7 @@ const Home = () => {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-3 md:mb-4">
                 Welcome to Anand Realtyy
               </h2>
-              <div className="w-16 md:w-20 h-1  mx-auto mb-4 md:mb-6"></div>
+              <div className="w-16 md:w-20 h-1 bg-orange-500 mx-auto mb-4 md:mb-6"></div>
               <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed px-2">
                 Established with a vision to redefine real estate through ethical practices and uncompromised quality, 
                 Anand Realtyy has been creating dream spaces for over 27 years. We believe that everyone deserves a home 
@@ -408,9 +404,12 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="px-2"
               >
-                <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4">Our Founding Principle</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-3 md:mb-4">
+                  Our Founding Principle
+                </h3>
                 <p className="text-gray-700 mb-3 md:mb-4 leading-relaxed text-sm md:text-base">
-                   This ancient wisdom forms the bedrock of our operations. 
+                  <i className="fas fa-quote-left text-orange-500 mr-2"></i> 
+                  This ancient wisdom forms the bedrock of our operations. 
                   We've demonstrated that when you uphold righteousness and ethical practices, success follows naturally.
                 </p>
                 <p className="text-gray-700 leading-relaxed text-sm md:text-base">
@@ -427,22 +426,24 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="bg-white p-4 md:p-6 rounded-xl shadow-lg mx-2"
               >
-                <h4 className="text-lg md:text-xl font-semibold text-blue-800 mb-3 md:mb-4">Why We're Different</h4>
+                <h4 className="text-lg md:text-xl font-semibold text-blue-800 mb-3 md:mb-4">
+                  Why We're Different
+                </h4>
                 <ul className="space-y-2 md:space-y-3">
                   <li className="flex items-start">
-                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
+                    <i className="fas fa-file-contract text-orange-500 mr-2 md:mr-3 mt-1"></i>
                     <span className="text-gray-700 text-sm md:text-base">Complete legal transparency in all transactions</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
+                    <i className="fas fa-compass text-orange-500 mr-2 md:mr-3 mt-1"></i>
                     <span className="text-gray-700 text-sm md:text-base">Vastu-compliant designs for harmonious living</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
+                    <i className="fas fa-hard-hat text-orange-500 mr-2 md:mr-3 mt-1"></i>
                     <span className="text-gray-700 text-sm md:text-base">Premium quality construction that stands the test of time</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-orange-500 mr-2 md:mr-3 mt-1 text-sm">•</span>
+                    <i className="fas fa-headset text-orange-500 mr-2 md:mr-3 mt-1"></i>
                     <span className="text-gray-700 text-sm md:text-base">Customer-centric approach with lifelong support</span>
                   </li>
                 </ul>
@@ -466,7 +467,7 @@ const Home = () => {
               The Anand Realtyy Advantage
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
-              Experience the difference that comes with 27+ years of trusted real estate development
+              Experience the difference that comes with trusted real estate development
             </p>
           </motion.div>
 
@@ -527,14 +528,16 @@ const Home = () => {
                     <div key={review.id} className="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-xl transition-all duration-300">
                       <StarRating rating={review.rating} />
                       <blockquote className="text-gray-700 text-xs md:text-sm mb-3 md:mb-4 leading-relaxed min-h-[80px] md:min-h-[96px]">
-                        "{review.comment}"
+                        <i className="fas fa-quote-left text-blue-200 mr-1 text-sm"></i>
+                        {review.comment}
+                        <i className="fas fa-quote-right text-blue-200 ml-1 text-sm"></i>
                       </blockquote>
                       <div className="flex items-center space-x-2 md:space-x-3">
                         <div className="text-2xl md:text-3xl">{review.avatar}</div>
                         <div className="flex-1">
                           <div className="font-semibold text-gray-900 text-sm md:text-base">{review.name}</div>
-                          <div className="text-xs text-gray-600">{review.location}</div>
-                          <div className="text-xs text-gray-500">{review.date}</div>
+                          <div className="text-xs text-gray-600"><i className="fas fa-map-marker-alt mr-1"></i>{review.location}</div>
+                          <div className="text-xs text-gray-500"><i className="fas fa-calendar-alt mr-1"></i>{review.date}</div>
                         </div>
                       </div>
                     </div>
@@ -559,15 +562,21 @@ const Home = () => {
             {/* Reviews Summary */}
             <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 text-center">
               <div>
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-1 md:mb-2">500+</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-1 md:mb-2">
+                  <i className="fas fa-home mr-2"></i>500+
+                </div>
                 <div className="text-gray-600 font-semibold text-sm md:text-base">Happy Families</div>
               </div>
               <div>
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-1 md:mb-2">4.9/5</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-orange-600 mb-1 md:mb-2">
+                  <i className="fas fa-star mr-2"></i>4.9/5
+                </div>
                 <div className="text-gray-600 font-semibold text-sm md:text-base">Average Rating</div>
               </div>
               <div>
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600 mb-1 md:mb-2">98%</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-600 mb-1 md:mb-2">
+                  <i className="fas fa-thumbs-up mr-2"></i>98%
+                </div>
                 <div className="text-gray-600 font-semibold text-sm md:text-base">Recommendation Rate</div>
               </div>
             </div>
@@ -617,7 +626,7 @@ const Home = () => {
                   <ul className="space-y-2 md:space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-700 text-sm md:text-base group-hover:text-gray-800 transition-colors">
-                        <span className="text-orange-500 mr-2 md:mr-3 text-lg">✓</span>
+                        <span className="text-orange-500 mr-2 md:mr-3 text-lg"><i className="fas fa-check-circle"></i></span>
                         {feature}
                       </li>
                     ))}
@@ -640,7 +649,7 @@ const Home = () => {
             className="text-center mb-8 md:mb-12"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 mb-3 md:mb-4">
-              Our Guiding Principles
+             Our Guiding Principles
             </h2>
             <p className="text-base md:text-lg text-gray-600 px-2">
               The values that drive every decision and action at Anand Realtyy
@@ -687,13 +696,13 @@ const Home = () => {
                 to="/contact" 
                 className="bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
               >
-                Schedule Free Consultation
+                <i className="fas fa-calendar-check mr-2"></i>Schedule Free Consultation
               </Link>
               <Link 
                 to="/projects" 
                 className="border border-white text-white hover:bg-white hover:text-blue-800 px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition-all duration-300 text-sm md:text-base"
               >
-                Browse All Projects
+                <i className="fas fa-search mr-2"></i>Browse All Projects
               </Link>
             </div>
           </motion.div>
