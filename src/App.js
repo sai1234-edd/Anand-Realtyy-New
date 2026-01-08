@@ -13,24 +13,25 @@ import ScrollToTop from './components/ScrollToTop'; // Import the ScrollToTop co
 
 function App() {
   return (
-    <ModalProvider> {/* Wrap everything with ModalProvider */}
-      <Router>
-        <div className="min-h-screen bg-white">
-          <ScrollToTop /> {/* Add ScrollToTop component here */}
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/Landinfo" element={<Landinformation />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </ModalProvider>
+    // <ModalProvider> {/* Wrap everything with ModalProvider */}
+    //   <Router>
+    //     <div className="min-h-screen bg-white">
+    //       <ScrollToTop /> {/* Add ScrollToTop component here */}
+    //       <Header />
+    //       <main>
+    //         <Routes>
+    //           <Route path="/" element={<HomePage />} />
+    //           <Route path="/about" element={<AboutPage />} />
+    //           <Route path="/projects" element={<ProjectsPage />} />
+    //           <Route path="/contact" element={<ContactPage />} />
+    //           <Route path="/Landinfo" element={<Landinformation />} />
+    //         </Routes>
+    //       </main>
+    //       <Footer />
+    //     </div>
+    //   </Router>
+    // </ModalProvider>
+    <h1>NOT FOUND</h1>
   );
 }
 
